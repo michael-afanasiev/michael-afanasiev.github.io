@@ -2,29 +2,37 @@
 
   <div class="wrapper">
 
-    <center>
-        
-		<p><a class="link" href="{{ site.baseurl }}/archive/">Archive</a> /
-		<a class="link" href="{{ site.baseurl }}/category/">Category</a> / 
-		<a class="link" href="{{ site.baseurl }}/tags/">Tags</a> / 
-		<a class="link" href="{{ site.baseurl }}/about/">About</a> /
-		<a class="link" href="{{ site.baseurl }}/contact/">Contact</a>
-        </p>
+    <h2 class="footer-heading">{{ site.title }}</h2>
 
-        <span><script>document.write(new Date().getFullYear());</script></span>
-        <span>&copy;</span>
-        
-		<a class="link" href="{{ site.baseurl }}">{{ site.name }}</a>
-		<br>
-		<span>Theme &copy; <a class="link" href="https://twitter.com/itisbenjamin1" target="_blank"> Ben</a> | </span>
-				<iframe
-			style="margin-left: 2px; margin-bottom:-5px;"
-			frameborder="0" scrolling="0" width="91px" height="20px"
-			src="https://ghbtns.com/github-btn.html?user=itisbenjamin&repo=Nice_Blog&type=star&count=true" >
-		</iframe>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
 
-    </center>
-    
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
   </div>
 
 </footer>
