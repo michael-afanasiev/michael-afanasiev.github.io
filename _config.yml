@@ -1,0 +1,15 @@
+# Site settings
+title: YachtHeavy
+name: Michael Afanasiev # your name
+email: mafanasiev@gmail.com # your email address
+description: >
+    A blog on programming, and the rest. # this means to ignore newlines until "baseurl:"
+baseurl: "/Nice_Blog" # the subpath of your site, e.g. /blog
+url: "https://itisbenjamin.github.io" # the base hostname & protocol for your site
+github_username: michael-afanasiev # your Github username
+
+skillstree: true # turn on or off the skills tree in about page
+
+# Build settings
+permalink: none
+markdown: kramdown
