@@ -51,7 +51,7 @@ If you compile and run this (ensuring to use `-std=c++11`) you’ll get a simple
 
 This is about as simple as you can get. If you’d like, you can easily make this into something that’s polymorphic at runtime by adding a factory function that returns one class or the other based on some command line arguments. We also find no problem in adding an arbitrary number of animals and operating on them one at a time in our vector.
 
-Now, say that you wanted to expand your pets’ minds. Maybe you sat down with them and watched David Attenborough wax poetic about the arctic night, and now want to have a conversation about it. This will require modifying their original responses to include their thoughts on BBC: Frozen Planet. Below I’ll jump straight into using mixins to accomplish this, even though it can be accomplished (at this stage) by class pointers. Once I get to the finite-element example, we’ll revisit that decision.
+Now, say that you wanted to expand your pets’ minds. Maybe you sat down with them and watched David Attenborough wax poetic about the Arctic night, and now want to have a conversation about it. This will require modifying their original responses to include their thoughts on BBC: Frozen Planet. Below I’ll jump straight into using mixins to accomplish this, even though it can be accomplished (at this stage) by class pointers. Once I get to the finite-element example, we’ll revisit that decision.
 
 ## Part 2: Compile time polymorphism with template mixins
 
@@ -279,7 +279,7 @@ This has been a trivial example, but I hope it gets the main point across. With 
 
 I’ve made extensive use of this pattern in a code called Salvus, which is a package designed for full waveform modelling and inversion. If you’re interested in seeing just how these patterns might work in the real world, check out [these](https://github.com/SalvusHub/salvus/blob/master/src/cxx/Element/Element.cpp#L122-L242) lines, which define a factory function. Here, instead of Dog and Cat, we’re mixing in dynamic physical equations with different types of finite elements. They all get pushed back to a polymorphic container, and get operated on [here](https://github.com/SalvusHub/salvus/blob/master/src/cxx/Problem/Problem.cpp#L177-L200). The package is a work in progress (isn’t it always), but the linked functionality is key to the design.
 
-Next time (next week?) I’ll go over how we manipulate the mixins to allow for some very cool unit tests. Again, this should be applicable to generic problems, but the main example will be based on finite elements. Further down the road, I’ll delve into the highs and lows of shipping mixin classes off to CUDA capable GPUs. And if all goes well, I just might wax poetic about the Artic night myself.
+Next time (next week?) I’ll go over how we manipulate the mixins to allow for some very cool unit tests. Again, this should be applicable to generic problems, but the main example will be based on finite elements. Further down the road, I’ll delve into the highs and lows of shipping mixin classes off to CUDA capable GPUs. And if all goes well, I just might wax poetic about the Arctic night myself.
 
 If you’re interested in any of this stuff, please don’t hesitate to send an email.
 
